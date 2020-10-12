@@ -1,3 +1,3 @@
 # Buffer Overflow Fuzzer Script
 
-used to fuzz the bytes that the program crash.
+used to fuzz the bytes that make the program crash.
