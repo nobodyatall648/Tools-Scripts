@@ -22,12 +22,12 @@ decryptedText = ''
 if (howToGen['data']['enctype'] == 'BASE64'):
 	decryptedText = base64.b64decode(howToGen['data']['data']).decode()
 	print("Decoded Text")
-	print("============")
+	print("============", end='\n\n')
 	print(decryptedText)
 elif (howToGen['data']['enctype'] == 'ROT13'):
 	decryptedText = codecs.decode(howToGen['data']['data'], "rot13")
 	print("Decrypted Text")
-	print("==============")
+	print("==============", end='\n\n')
 	print(decryptedText)
 
 
