@@ -28,7 +28,7 @@ elif(mode == 2):
 	rsl = requests.post(expanderLink, data=data)	
 	soup = BeautifulSoup(rsl.text, 'html.parser')
 	retLinks = soup.findAll("a", {"class": "result-a"})
-	expandUrl = str(retLinks[1]).split()[2].split('=')[1].replace('"', '')
+	expandUrl = str(retLinks[1]).split()[2].replace('href=', '').replace('"', '')	
 	print("Expand URL: " + expandUrl)
 else:
 	print("Please Select the Correct Mode.")
