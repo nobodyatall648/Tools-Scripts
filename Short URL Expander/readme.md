@@ -1,6 +1,6 @@
  # Short URL Expander
  
- Reveal the shorten link by expanding the shorten URL. 
+ Reveal the real full URL by expanding the shorten URL. 
  
  Useful to prevent clicking on shorten malicious links.
  
