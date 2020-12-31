@@ -1,6 +1,8 @@
  # Short URL Expander
  
- Reveal the shorten link by expanding the shorten URL. Useful to prevent clicking on shorten malicious links.
+ Reveal the shorten link by expanding the shorten URL. 
+ 
+ Useful to prevent clicking on shorten malicious links.
  
  Install Dependencies
  ```
