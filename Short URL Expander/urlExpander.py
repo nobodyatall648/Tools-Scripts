@@ -21,14 +21,22 @@ if(mode == 1):
 	print("Expand URL: " + expandUrl)
 elif(mode == 2):
 	#use expander website	
-	expanderLink = "http://urlexpander.net"
+	domainLink = "https://urlexpander.net/"
+	expanderLink = "https://urlexpander.net/inc/ajax.php"	
+	session = requests.Session()
+
+	#get session cookies
+	session.get(domainLink)
+
 	data = {
-		"url" : shortURL
+		"domain" : shortURL
 	}
-	rsl = requests.post(expanderLink, data=data)	
+
+	rsl = session.post(expanderLink, data=data)	
 	soup = BeautifulSoup(rsl.text, 'html.parser')
 	retLinks = soup.findAll("a", {"class": "result-a"})
-	expandUrl = str(retLinks[1]).split()[2].replace('href=', '').replace('"', '')	
+
+	expandUrl = str(retLinks[0]).split()[2].replace('href=', '').replace('"', '')	
 	print("Expand URL: " + expandUrl)
 else:
 	print("Please Select the Correct Mode.")
